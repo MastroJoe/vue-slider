@@ -8,6 +8,7 @@ var app = new Vue(
     el: '#root',
     data: {
       index: 0,
+      // title: 'Mountain Slider',
       imgs: [
         'https://www.wallpapertip.com/wmimgs/3-35636_download-nature-wallpapers-full-hd-1080p-photo-desktop.jpg',
         'https://wallpapercave.com/wp/wp2438908.jpg',
@@ -26,8 +27,12 @@ var app = new Vue(
       },
       // creo funzione per scorrere a sx al click delle icone
       prev: function (){
-        this.index--;
-      }
+        if (this.index > 0) {
+          this.index--;
+        } else {
+          this.index = this.imgs.length - 1;
+        }
+      },
     }
   }
 );
