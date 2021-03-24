@@ -11,13 +11,13 @@
 <body>
   <div id="root">
     <div class="container">
-      <div class="control prev">
+      <div class="control prev" @click="prev">
         <i class="fas fa-chevron-left"></i>
       </div>
       <div class="slides">
-        <img width="600" :src="imgs" alt="">
+        <img width="600" :src="imgs[index]" alt="">
       </div>
-      <div class="control prev">
+      <div class="control next" @click="next">
         <i class="fas fa-chevron-right"></i>
     </div>
   </div>

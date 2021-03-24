@@ -10,9 +10,24 @@ var app = new Vue(
       index: 0,
       imgs: [
         'https://www.wallpapertip.com/wmimgs/3-35636_download-nature-wallpapers-full-hd-1080p-photo-desktop.jpg',
-        'https://i.pinimg.com/originals/25/2d/e9/252de9410dba461a7f27d9b7eebad0e2.jpg',
+        'https://wallpapercave.com/wp/wp2438908.jpg',
         'https://wallpapercave.com/wp/wp2809570.jpg',
       ]
+    },
+    methods: {
+      // creo funzione per scorrere a dx al click delle icone
+      next: function () {
+        // utilizzo index
+        if (this.index < this.imgs.length - 1) {
+          this.index++;
+        } else {
+          this.index = 0;
+        }
+      },
+      // creo funzione per scorrere a sx al click delle icone
+      prev: function (){
+        this.index--;
+      }
     }
   }
 );
