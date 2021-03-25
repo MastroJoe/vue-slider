@@ -26,7 +26,15 @@
     </div>
     <!-- DOTS -->
     <div class="container dots">
-      <i v-for="dots in imgs.length" class="far fa-circle" :class="(dots - 1 == index ) ? 'active' : '' " @click='active(dots - 1)'></i>
+      <i v-for="dots in imgs.length"
+         class="far fa-circle"
+         :class="(dots - 1 == index ) ? 'active' : '' "
+         @click='active(dots - 1)'>
+      </i>
+    </div>
+    <!-- BUTTON -->
+    <div class="container">
+      <button type="button" name="button" @click="autoplay">Autoplay On/Off</button>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
