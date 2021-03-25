@@ -33,6 +33,10 @@ var app = new Vue(
           this.index = this.imgs.length - 1;
         }
       },
+      // creo funzione per attivare il dot corrispondente
+      active: function (index){
+      this.index = index;
+      },
     }
   }
 );

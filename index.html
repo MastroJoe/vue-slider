@@ -12,6 +12,7 @@
 </head>
 <body>
   <div id="root">
+    <!-- SLIDER IMMAGINI -->
     <div class="container">
       <div class="control prev" @click="prev">
         <i class="fas fa-chevron-left"></i>
@@ -21,6 +22,11 @@
       </div>
       <div class="control next" @click="next">
         <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+    <!-- DOTS -->
+    <div class="container dots">
+      <i v-for="dots in imgs.length" class="far fa-circle" :class="(dots - 1 == index ) ? 'active' : '' " @click='active(dots - 1)'></i>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
